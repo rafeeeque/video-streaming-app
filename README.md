@@ -1,4 +1,4 @@
-# Project Name
+# Video Streaming Application
 
 The `Video Streaming Application` was designed to live stream the video and save it in the system. It has the following features,
 
