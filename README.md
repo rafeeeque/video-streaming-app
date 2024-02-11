@@ -59,31 +59,31 @@ Follow these steps to set up the project:
 
     4.1 **Change to the frontend**
 
-        ```bash
-        cd frontend
-        ```
+    ```bash
+    cd frontend
+    ```
 
     4.2 **Install Packages**
 
-        ```bash
-        npm i
-        ```
+    ```bash
+    npm i
+    ```
 
     4.3 **Setup .env file**
 
-        Copy the `.env.example` file into `.env` and change the values if required.
+    Copy the `.env.example` file into `.env` and change the values if required.
 
-        ```bash
-        cp .env.example .env
+    ```bash
+    cp .env.example .env
         ```
 
     4.3 **Start the frontend App**
 
-        ```bash
-        npm start
-        ```
+    ```bash
+    npm start
+    ```
 
-        This will start the app in `http://localhost:5173/`
+    This will start the app in `http://localhost:5173/`
 
 5. **Setup the backend**
 
@@ -91,38 +91,38 @@ Follow these steps to set up the project:
 
     5.1 **Change to the backend**
 
-        ```bash
-        cd backend
-        ```
+    ```bash
+    cd backend
+    ```
 
     5.2 **Install Packages**
 
-        ```bash
-        npm i
-        ```
+    ```bash
+    npm i
+    ```
 
     5.3 **Setup .env file**
 
-        - Copy the `.env.example` file into `.env` and change the values if required.
-        - `VITE_API_BASE_URL` needs to be the `API URL`
+    - Copy the `.env.example` file into `.env` and change the values if required.
+    - `VITE_API_BASE_URL` needs to be the `API URL`
 
-        ```bash
-        cp .env.example .env
-        ```
+    ```bash
+    cp .env.example .env
+    ```
     
     5.4 **Create Google Client ID and Secret**
 
-        - Create Google Client ID and Secret Key and replace the env variables `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`
-        - Add `http://localhost:5000/auth/google/callback` as the `redirect URI` which creating the app.
-        - The credentials which is already there was from `my account`. If you want ot use that, then please do let me know your google account, I can add you as a `tester`.
+    - Create Google Client ID and Secret Key and replace the env variables `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`
+    - Add `http://localhost:5000/auth/google/callback` as the `redirect URI` which creating the app.
+    - The credentials which is already there was from `my account`. If you want ot use that, then please do let me know your google account, I can add you as a `tester`.
 
     5.5 **Start the backend App**
 
-        ```bash
-        npm start
-        ```
+    ```bash
+    npm start
+    ```
 
-        This will start the app in `http://localhost:5000/`
+    This will start the app in `http://localhost:5000/`
 
 
 ## Using the Application
