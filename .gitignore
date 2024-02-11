@@ -1,0 +1,15 @@
+# Dependency directories
+**/node_modules/
+
+**/dist/
+
+# Environment variables file
+**/.env
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db

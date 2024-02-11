@@ -1,0 +1,26 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@quasar/app": "^3.3.3",
+    "@quasar/extras": "^1.0.0",
+    "axios": "^1.6.7",
+    "quasar": "^2.0.0",
+    "vue": "^3.4.15",
+    "vue-router": "^4.0.13",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "vite": "^5.1.0",
+    "vue-cli-plugin-quasar": "~5.0.2"
+  },
+  "type": "module"
+}
