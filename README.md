@@ -75,7 +75,7 @@ Follow these steps to set up the project:
 
     ```bash
     cp .env.example .env
-        ```
+    ```
 
     4.3 **Start the frontend App**
 
@@ -127,9 +127,9 @@ Follow these steps to set up the project:
 
 ## Using the Application
 
-    Now, your application is ready. Open your web browser and visit `http://localhost:5173/`.
+Now, your application is ready. Open your web browser and visit `http://localhost:5173/`.
 
-    ![Home](./screenshots/Home.png)
+![Home](./screenshots/Home.png)
 
 1. **Login**
 
