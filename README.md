@@ -178,14 +178,6 @@ Now, your application is ready. Open your web browser and visit `http://localhos
     ![Videoslisting](./screenshots/Videoslisting.png)
     ![Videoplayback](./screenshots/Videoplayback.png)
 
-### Pending
-
-Below are the items which are pending from the requirements,
-
-1. Login with `Facebook` and `LinkedIn`
-2. Email notification when saving an image frame
-3. Share the image through `WhatsApp`
-
 ### Note
 
 I'll be able to work on the pending items if needed. Finished this system in 2 days taking 8 - 9 hours in total.
