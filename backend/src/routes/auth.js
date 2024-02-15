@@ -7,7 +7,7 @@ router.get('/auth/google', authController.googleAuth);
 router.get('/auth/google/callback', authController.googleAuthCallback);
 
 router.get('/auth/facebook', authController.facebookAuth);
-router.get('/auth/facebook/callback', authController.facebookAuthCallback);
+router.post('/auth/facebook/callback', authController.facebookAuthCallback);
 
 router.get('/auth/linkedin', authController.linkedinAuth);
 router.get('/auth/linkedin/callback', authController.linkedinAuthCallback);

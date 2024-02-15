@@ -7,10 +7,13 @@
             <q-btn @click="isShowingGrid = true">Detailed Grid</q-btn>
             <h6>Image Frames</h6>
             <div class="q-gutter-md q-col-gutter-sm q-row">
-                <q-card class="image-card" v-for="(image, index) in images" :key="index" @click="openSlider(image)">
-                    <q-img :src="`${VITE_API_BASE_URL}/uploads/${image.path}`" />
-                </q-card>
-                <p v-if="!images.length">No images found</p>
+                    <q-card class="image-card" v-for="(image, index) in images" :key="index" @click="openSlider(image)">
+                        <q-img :src="`${VITE_API_BASE_URL}/uploads/${image.path}`" />
+                            <q-btn @click.stop="shareImage(image)" class="share-button">
+                                <q-icon name="send" style="font-size: 20px; color: green;" />
+                          </q-btn>
+                    </q-card>
+                 <p v-if="!images.length">No images found</p>
             </div>
 
             <!-- Modal for displaying slider -->
@@ -73,7 +76,12 @@ export default {
         },
         closeSlider() {
             this.showSlider = false; // Hide the slider modal
-        }
+        },
+        async shareImage(image) {
+        const imageUrl = `${this.VITE_API_BASE_URL}/uploads/${image.path}`
+        const whatsappURL = `https://api.whatsapp.com/send?&text=${encodeURIComponent(`Hey there, check out this image: ${imageUrl}`)}.`
+        window.open(whatsappURL, '_blank');
+    },
     }
 };
 </script>
@@ -93,5 +101,15 @@ export default {
 }
 .full-width {
     width: 100%;
+}
+.share-button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 </style>

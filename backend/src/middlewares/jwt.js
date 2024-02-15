@@ -12,7 +12,8 @@ export const verifyToken = (req, res, next) => {
         if (err) {
             return res.status(403).json({ message: 'Failed to authenticate token' });
         }
-        req.userId = decoded.userId; // Attach user ID to request object for subsequent middleware or route handlers
+        req.userId = decoded.userId;
+        req.email = decoded.email; // Attach user ID to request object for subsequent middleware or route handlers
         next();
     });
 };

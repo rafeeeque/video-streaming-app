@@ -12,7 +12,6 @@ import path from 'path';
 import dotenv from 'dotenv';
 dotenv.config();
 
-console.log('process.env.DB_URL', process.env.DB_URL)
 const app = express();
 const PORT = process.env.PORT || 5000;
 const mongoURI = process.env.DB_URL || 'mongodb://localhost:27017/video_streaming_app';

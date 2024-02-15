@@ -1,7 +1,10 @@
 import Image from "../models/Image.js";
 import fs from "fs";
+import { send } from '../email.js'
 
 export const uploadImage = async (req, res) => {
+  // console.log(req.email, 'email')
+
   try {
     // Check if binary data exists in request body
     if (!req.files || !req.files.length) {
@@ -15,7 +18,6 @@ export const uploadImage = async (req, res) => {
 
     // Write the image data to a file
     fs.writeFileSync(`uploads/images/${filename}`, imageFile.buffer, "binary");
-
     // Save image information to the database
     const image = new Image({
       filename: filename,
@@ -23,7 +25,13 @@ export const uploadImage = async (req, res) => {
       path: imagePath,
     });
     await image.save();
-
+    // try {
+    //   const imageData = fs.readFileSync(`uploads/images/${filename}`);
+    //   const base64Image = imageData.toString('base64');
+    //   await send('rafeequekhp134@gmail.com', base64Image, filename)
+    // } catch (err) {
+    //   console.error(err);
+    // }
     // // Respond with success message
     res.status(200).json({ message: "Image uploaded successfully" });
   } catch (error) {
